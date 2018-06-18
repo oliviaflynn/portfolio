@@ -1,0 +1,363 @@
+
+/*
+Container containing all div elements and displaying as grid
+*/
+
+#container { 
+    max-width: 2000px;
+    overflow:hidden;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas: 
+    
+    "top"
+    "webBanner"
+    "webShowcase"
+    "iUse"
+    "illBanner"
+    "illShowcase"
+    "contactBanner"
+    "contactShowcase"
+    "socialMedia"
+    "footer"
+    ;
+}
+
+#webGrid {
+    display: grid;
+    grid-template-areas:
+    "siteOne siteTwo"
+    "siteThree siteFour";
+}
+
+main {
+   font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/*
+nav
+*/
+
+nav {
+    position: fixed; 
+    width: 100%; 
+    display: inline; 
+    z-index: 10;   
+    background-color: #708c78;   
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    
+    
+}
+
+nav ul {    
+    background-color: #708c78;
+    text-align: center;
+
+  }
+nav li {
+    display:inline;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.2em;
+    line-height: 40px;
+   
+  }
+   
+nav a {
+    text-decoration: none;
+    color: #000000;    
+    transition: .5s background-color;
+  }
+   
+nav a:hover {
+    background-color: #708C78;
+  }
+   
+nav a.active {
+    background-color: #fff;
+    color: #000000;
+    cursor: default;
+  }
+
+nav ul li {    
+    content: "•";
+    color:#8c3d35; 
+}
+
+#mainLogo {
+    grid-area: mainLogo;
+    opacity: 0.7;
+    transform: scale(0.9) translate(-50%, 45%);
+    
+}
+#top {
+    font-family: 'Amatic SC', cursive;
+    font-size: 90pt;
+    letter-spacing: 15pt;
+    padding-top: 10%;
+    padding-bottom: 12%;
+    padding-left:25%;
+    text-align: left;
+    grid-area: top;
+    background-color: #d9d9d9;    
+    color: #1C2833;
+}
+
+header p {
+    font-family: "Open Sans Condensed";
+    font-size: 10pt;
+    letter-spacing: 1pt;
+    text-align: left;
+    margin-left: 20%;
+}
+
+
+
+#webBanner, #webShowcase, #illBanner, #illShowcase, #contactBanner, #contactShowcase, #socialMedia, #iUse
+{
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    
+}
+
+#webBanner {
+    grid-area: webBanner;
+    width:100%;
+    font-size: 20pt;
+    background-color: #403f3d;
+    background-size: 100% 100%;
+    color: #FEFEFE;
+    
+}
+
+#webShowcase {
+    grid-area: webShowcase;
+    background-color: #ffffff;
+    /*background-color: #d9d9d9;*/
+    
+}
+
+#siteOne {
+    grid-template-areas: siteOne;   
+    position: relative;
+       
+}
+
+#siteTwo {
+    grid-template-areas: siteTwo;
+    position: relative;
+}
+
+#siteThree {
+    grid-template-areas: siteThree;
+}
+
+#siteFour {
+    grid-template-areas: siteFour;
+}
+
+.feature {
+    max-width: 650px;
+    max-height:400px;
+
+}
+
+.img__description_layer {
+    position: absolute;  
+    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(112, 140, 120, 0.9);
+    color: #000000;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .2s, visibility .2s;
+    
+  }
+  
+  #siteOne:hover .img__description_layer,
+  #siteTwo:hover .img__description_layer,
+  #siteFour:hover .img__description_layer,
+  #siteOne:hover .img__description_layer   {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .img__description {
+    transition: .2s;
+    transform: translateY(1em);
+  }
+  
+  #siteOne:hover .img__description,
+  #siteTwo:hover .img__description,
+  #siteThree:hover .img__description,
+  #siteFour:hover .img__description {
+    transform: translateY(0);
+  }
+
+
+#iUse {
+    grid-area: iUse;
+    background-color: #FEFEFE;
+
+}
+
+
+#illBanner {
+    font-size: 20pt;
+    grid-area: illBanner;
+    background-color: #d9b68b;
+}
+
+#illShowcase {
+    grid-area: illShowcase;
+    background-color: #d9d9d9;
+}
+
+#contactBanner {
+    font-size: 20pt;
+    color: #FEFEFE;
+    grid-area: conatactBanner;
+    background-color: #8c3d35;
+}
+
+#contactShowcase {
+    grid-area: contactShowcase;
+    background-color: #d9d9d9;
+    display: flex;
+    display: grid;
+    grid-template-areas:
+    "info form";
+  
+    
+}
+
+#info {
+    grid-area: info;
+    background-color: #f7f7f7;
+    margin-left: 10%;
+    
+}
+
+.contact {
+    font-size: 20pt;
+    display: inline;
+}
+
+#socialMedia {
+    grid-area: socialMedia;
+    background-color: #bebfb4;
+    
+}
+
+footer {
+    text-align: center;
+    grid-area: footer;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding-top: 5%;
+    padding-bottom: .5%;
+
+}
+
+.icon {
+    padding-left: 5%;
+    /*padding-right: 5%; change in media q for screen 900 or less width*/
+    height: 100px;
+    width: 100px;
+    
+}
+
+.icon:hover {    
+    color: #FEFEFE;
+    opacity: 0.5;    
+}
+
+/*CSS Rules for HTML Form
+source: https://www.sanwebe.com/2014/08/css-html-forms-designs
+*/
+
+.form-style-6{
+    grid-area: form;
+    font-family: 'Open Sans Condensed', sans-serif;         
+    background: #F7F7F7;
+    margin-left:10%;
+    margin-right:10%;
+    padding:1% 1% 1%;
+    max-width: 450px;
+
+
+
+}
+.form-style-6 h1{
+    
+    background: #8c3d35;
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    margin: -16px -16px 16px -16px;
+}
+.form-style-6 input[type="text"],
+.form-style-6 input[type="date"],
+.form-style-6 input[type="datetime"],
+.form-style-6 input[type="email"],
+.form-style-6 input[type="number"],
+.form-style-6 input[type="search"],
+.form-style-6 input[type="time"],
+.form-style-6 input[type="url"],
+.form-style-6 textarea,
+.form-style-6 select
+{
+    outline: none;
+    box-sizing: border-box;    
+    width: 100%;
+    background: #fefefe;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% 'Open Sans Condensed', sans-serif;
+}
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="date"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+    box-shadow: 0 0 5px #8c3d35;
+    padding: 3%;
+    border: 1px solid #8c3d35;
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #8c3d35;
+    border-bottom: 2px solid #5f2a25;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;   
+    color: #FEFEFE;
+}
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+    background: #662b25;
+}
