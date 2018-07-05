@@ -34,8 +34,11 @@ html {
     display: grid;
     grid-template-areas:
     "siteOne siteTwo"
+    "siteThree sitThree"
     ;
 }
+
+
 
 main {
    font-family: 'Open Sans Condensed', sans-serif;
@@ -49,8 +52,8 @@ nav
 
 nav {
     position: fixed; 
-    width: 100%; 
-    display: inline; 
+    width: 1650px;    
+    display: block; 
     z-index: 10;   
     background-color: #708c78;   
 
@@ -136,25 +139,71 @@ h1 .textBoxContent {
 }
 
 #webShowcase {
+    
     grid-area: webShowcase;
     background-color: #ffffff;
     /*background-color: #d9d9d9;*/
     
 }
 
+
 #siteOne {
     grid-template-areas: siteOne;   
     position: relative;
+    margin-bottom: 10%;
+    margin-left:5%;
+    padding-left: 5%;
+    padding-right:5%;
+    padding-top:5%;
+    padding-bottom:5%;
+    background-color: #E5E5E5;
+    border-radius: 5%;
+    
+    
        
 }
 
 #siteTwo {
     grid-template-areas: siteTwo;
     position: relative;
+    margin-bottom: 10%;
+    margin-left:5%;
+    margin-right: 5%;
+    padding-left: 5%;
+    padding-right:5%;
+    padding-top:5%;
+    padding-bottom:5%;
+    background-color: #E5E5E5;
+    border-radius: 5%;
 }
 
 #siteThree {
     grid-template-areas: siteThree;
+    position: relative;
+    
+    margin-left:5%;
+    padding-left: 5%;
+    padding-right:5%;
+    padding-top:5%;
+    padding-bottom:5%;
+    background-color: #E5E5E5;
+    border-radius: 5%;
+  
+   
+}
+
+
+#siteFour {
+    grid-template-areas: siteThree;
+    position: relative;
+    margin-right:5%;
+    margin-left:5%;
+    padding-left: 5%;
+    padding-right:5%;
+    padding-top:5%;
+    padding-bottom:5%;
+    background-color: #E5E5E5;
+    border-radius: 5%;
   
    
 }
@@ -235,9 +284,360 @@ footer {
     color: #FEFEFE;
     opacity: 0.5;    
 }
-
-
-
+/*Floating Back to Top Button with Smooth Scroll using CSS & JQuery https://codepen.io/desirecode/pen/MJPJqV*/
+#scroll {
+    position:fixed;
+    z-index: 11;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    width: 75px;
+    height:75px;
+    background-color:#3498db;
+    text-indent:-9999px;
+    display:none;
+    -webkit-border-radius:60px;
+    -moz-border-radius:60px;
+    border-radius:60px
+}
+#scroll span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-8px;
+    margin-top:-12px;
+    height:0;
+    width:0;
+    border:8px solid transparent;
+    border-bottom-color:#ffffff;
+}
+#scroll:hover {
+    background-color:#e74c3c;
+    opacity:1;filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
+}
 /*Closing media Query*/
+}
+
+
+@media(max-width:500px){
+
+    html {
+        background-color: #d9d9d9;
+        
+    }
+    #container { 
+        align-content: center;
+        width: 100%;
+        margin: 0 auto;
+        max-width:500px  
+        height: auto;
+        overflow:hidden;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-areas: 
+        
+        "top"
+        "webBanner"
+        "webShowcase"
+        "iUse"
+        "illBanner"
+        "illShowcase"
+        "contactBanner"
+        "contactShowcase"
+        "socialMedia"
+        "footer"
+        ;
+    }
+    
+    #webGrid {
+        display: grid;
+        grid-template-areas:
+        "siteOne"
+        "siteTwo"
+        "siteThree "
+        "siteFour"
+        ;
+    }
+    
+    
+    
+    main {
+       font-family: 'Open Sans Condensed', sans-serif;
+    }
+    
+    
+    
+    /*
+    nav
+    */
+    
+    nav {
+        position: fixed; 
+        width: 300px;    
+        display: block; 
+        z-index: 10;   
+        background-color: #708c78;     
+        
+        
+    }
+    
+    nav ul {    
+        background-color: #708c78;
+        text-align: center;
+    
+      }
+    nav li {
+        display:inline;
+        padding-left: 2%;
+        padding-right: 2%;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 1.2em;
+        line-height: 40px;
+       
+      }
+       
+    nav a {
+        text-decoration: none;
+        color: #000000;    
+        transition: .5s background-color;
+      }
+       
+    nav a:hover {
+        background-color: #708C78;
+      }
+       
+    nav a.active {
+        background-color: #fff;
+        color: #000000;
+        cursor: default;
+      }
+    
+    
+    #top {
+        font-family: 'Londrina Sketch', cursive;
+        font-size: 10pt;
+        letter-spacing: 5pt;
+        padding-top: 10%;
+        padding-bottom: 12%;
+        padding-left:25%;
+        text-align: left;
+        grid-area: top;
+        background-color: #d9d9d9;    
+        color: #1C2833;
+    }
+    
+    header p {
+        font-family: sans-serif;
+        font-size: 9pt;
+        letter-spacing: 1pt;
+        text-align: left;
+        margin-left: 20%;
+    }
+    
+    h1 .textBoxContent {
+        text-decoration: none;
+    }
+    
+    
+    
+    #webBanner, #webShowcase, #illBanner, #illShowcase, #contactBanner, #contactShowcase, #socialMedia, #iUse
+    {
+        text-align: center;
+        padding-top: 4%;
+        padding-right:4%;
+        padding-bottom: 4%;
+        
+    }
+    
+    #webBanner {
+        grid-area: webBanner;
+        width:100%;
+        font-size: 12pt;
+        background-color: #403f3d;        
+        color: #FEFEFE;
+        
+    }
+    
+    #webShowcase {
+        
+        grid-area: webShowcase;
+        background-color: #ffffff;
+        
+        
+    }
+    
+    
+    #siteOne {
+        grid-template-areas: siteOne;   
+        position: relative;
+        margin-bottom: 10%;
+        margin-left:5%;
+        padding-left: 5%;
+        padding-right:5%;
+        padding-top:5%;
+        padding-bottom:5%;
+        background-color: #E5E5E5;
+        border-radius: 5%;
+        
+        
+           
+    }
+    
+    #siteTwo {
+        grid-template-areas: siteTwo;
+        position: relative;
+        margin-bottom: 10%;
+        margin-left:5%;
+        margin-right: 5%;
+        padding-left: 5%;
+        padding-right:5%;
+        padding-top:5%;
+        padding-bottom:5%;
+        background-color: #E5E5E5;
+        border-radius: 5%;
+    }
+    
+    #siteThree {
+        grid-template-areas: siteThree;
+        position: relative;
+        
+        margin-left:5%;
+        padding-left: 5%;
+        padding-right:5%;
+        padding-top:5%;
+        padding-bottom:5%;
+        background-color: #E5E5E5;
+        border-radius: 5%;
+      
+       
+    }
+    
+    
+    #siteFour {
+        grid-template-areas: siteThree;
+        position: relative;
+        margin-right:5%;
+        margin-left:5%;
+        padding-left: 5%;
+        padding-right:5%;
+        padding-top:5%;
+        padding-bottom:5%;
+        background-color: #E5E5E5;
+        border-radius: 5%;
+      
+       
+    }
+    
+    
+    #iUse {
+        grid-area: iUse;
+        background-color: #FEFEFE;
+    
+    }
+    
+    
+    #illBanner {
+        font-size: 20pt;
+        grid-area: illBanner;
+        background-color: #d9b68b;
+    }
+    
+    #illShowcase {
+        grid-area: illShowcase;
+        background-color: #d9d9d9;
+    }
+    
+    #contactBanner {
+        font-size: 20pt;
+        color: #FEFEFE;
+        grid-area: conatactBanner;
+        background-color: #8c3d35;
+    }
+    
+    #contactShowcase {
+        grid-area: contactShowcase;
+        background-color: #d9d9d9;
+        display: flex;
+        display: grid;
+        grid-template-areas:
+        "info form";
+      
+        
+    }
+    
+    #info {
+        grid-area: info;
+        background-color: #f7f7f7;
+        margin-left: 10%;
+        
+    }
+    
+    .contact {
+        font-size: 20pt;
+        display: inline;
+    }
+    
+    #socialMedia {
+        grid-area: socialMedia;
+        background-color: #bebfb4;
+        
+    }
+    
+    footer {
+        text-align: center;
+        grid-area: footer;
+        font-family: 'Open Sans Condensed', sans-serif;
+        padding-top: 5%;
+        padding-bottom: .5%;
+    
+    }
+    
+    .icon {
+        padding-left: 5%;
+        /*padding-right: 5%; change in media q for screen 900 or less width*/
+        height: 100px;
+        width: 100px;
+        
+    }
+    
+    .icon:hover {    
+        color: #FEFEFE;
+        opacity: 0.5;    
+    }
+    /*Floating Back to Top Button with Smooth Scroll using CSS & JQuery https://codepen.io/desirecode/pen/MJPJqV*/
+    #scroll {
+        position:fixed;
+        z-index: 11;
+        right:10px;
+        bottom:10px;
+        cursor:pointer;
+        width: 75px;
+        height:75px;
+        background-color:#3498db;
+        text-indent:-9999px;
+        display:none;
+        -webkit-border-radius:60px;
+        -moz-border-radius:60px;
+        border-radius:60px
+    }
+    #scroll span {
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin-left:-8px;
+        margin-top:-12px;
+        height:0;
+        width:0;
+        border:8px solid transparent;
+        border-bottom-color:#ffffff;
+    }
+    #scroll:hover {
+        background-color:#e74c3c;
+        opacity:1;filter:"alpha(opacity=100)";
+        -ms-filter:"alpha(opacity=100)";
+    }
+
+     /*Closing media Query*/  
 }
 
