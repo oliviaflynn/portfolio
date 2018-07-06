@@ -165,6 +165,7 @@ h1 .textBoxContent {
 
 #siteTwo {
     grid-template-areas: siteTwo;
+    border: solid black 1px;
     position: relative;
     margin-bottom: 10%;
     margin-left:5%;
